@@ -1,6 +1,7 @@
 import React from 'react';
 // import Pokemonitem from '../PokemonItem/Pokemonitem';
 import './home.css';
+import { Link } from 'react-router-dom';
 
 const pokemon_list = {
   '1': {
@@ -156,17 +157,19 @@ const pokeKeys = Object.keys(pokemon_list);
 const index = () => {
   return (
     <div className="grid-container">
-      {pokeKeys.map((item) => (
-        <div className="grid-items" key={pokemon_list[item].id}>
-          <img
-            src={pokemon_list[item].sprites.front_default}
-            alt=""
-            className="pokedex-img"
-          />
-          <h1>{pokemon_list[item].name}</h1>
-          <p>see more</p>
-        </div>
-      ))}
+      {pokeKeys.map((item) => {
+        const list = pokemon_list[item];
+        const { id, name } = list;
+        const { front_default } = list.sprites;
+
+        return (
+          <Link to="/pokemon/:id" className="grid-items" key={id}>
+            <img src={front_default} alt="" className="pokedex-img" />
+            <h1>{name}</h1>
+            <p>see more</p>
+          </Link>
+        );
+      })}
     </div>
   );
 };

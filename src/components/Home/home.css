@@ -14,6 +14,9 @@
   text-align: center;
   padding: 20px;
 }
+.grid-items > * {
+  text-decoration: none;
+}
 
 .grid-items:hover {
   box-shadow: 0 0 15px #888888;
