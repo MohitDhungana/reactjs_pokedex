@@ -1,0 +1,25 @@
+.grid-container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center;
+  gap: 20px;
+}
+
+.grid-items {
+  background-color: antiquewhite;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.grid-items:hover {
+  box-shadow: 0 0 15px #888888;
+  cursor: pointer;
+}
+
+.pokedex-img {
+  height: 150px;
+}
