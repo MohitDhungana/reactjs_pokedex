@@ -20,7 +20,7 @@ const Home = () => {
         // const getSprite = await axios.get(
         //   'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
         // );
-        console.log(res.data.results);
+        // console.log(res.data.results);
         const { results } = await res.data;
         setPokeList(results);
       } catch (error) {

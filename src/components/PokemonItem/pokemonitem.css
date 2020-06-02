@@ -1,6 +1,6 @@
 .item-container {
   border: 2px black solid;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 15px;
   height: 500px;
   width: 60%;
@@ -41,6 +41,10 @@
 
 .type-item {
   padding: 0 10px;
-  border: 2px solid green;
-  margin: 0 2px;
+  border: 2px solid black;
+  margin: 0 5px;
+}
+
+.loading {
+  text-align: center;
 }
