@@ -1,17 +1,21 @@
 import React from 'react';
 import './searchbar.css';
-import { Link } from 'react-router-dom';
 
 const Searchbar = () => {
+  const [searchTerm, setSearchTerm] = React.useState('');
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+  // console.log(searchTerm);
   return (
     <div className="flex-container">
-      <Link to="/" className="flex-item btn btn-back">
-        Go Back
-      </Link>
       <input
         className="flex-item searchbar"
         type="text"
         placeholder="Search..."
+        value={searchTerm}
+        onChange={handleSearch}
       />
     </div>
   );
