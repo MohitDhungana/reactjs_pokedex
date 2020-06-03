@@ -1,24 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function PokemonCard({ pokeList }) {
+function PokemonCard({ pokeShowList }) {
   return (
     <div>
       <div className="grid-container">
-        {pokeList.map((item, index) => {
+        {pokeShowList.map((item) => {
           // const { id, name } = item;
           // const { front_default } = item.sprites;
 
           return (
             <Link
-              to={`/pokemon/${index + 1}`}
+              to={`/pokemon/${item.id}`}
               className="grid-items"
-              key={index + 1}
+              key={item.id}
             >
               <img
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
-                  index + 1
-                }.png`}
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${item.id}.png`}
                 alt=""
                 className="pokedex-img"
               />
