@@ -1,4 +1,4 @@
-#[PREVIEW THIS PROJECT ON NETLIFY](https://reactjs-md-pokedex.netlify.app/)
+# [PREVIEW THIS PROJECT ON NETLIFY](https://reactjs-md-pokedex.netlify.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
